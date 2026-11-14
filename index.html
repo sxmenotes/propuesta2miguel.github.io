@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faldeos La Lajuela · Bosque Vivo · Cabañas &amp; Naturaleza en Libertad</title>
+  <meta name="description" content="Cabañas privadas inmersas en la naturaleza de La Lajuela. Tinas calientes, desayunos, camas de cuarzo y fauna libre. Reserva directa por WhatsApp." />
+  <meta property="og:title" content="Faldeos La Lajuela · Cabañas en el Bosque" />
+  <meta property="og:description" content="Descanso profundo en cabañas equipadas rodeadas de pavos reales, ciervos, alpacas y llamas en libertad." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_CL" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./src/styles.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/index.js",
+        "gsap/ScrollTrigger": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/ScrollTrigger.js"
+      }
+    }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
+
+  <!-- 1. HEADER FLOTANTE EN CÁPSULA -->
+  <header class="site-header" data-header>
+    <div class="header-capsule">
+      <a href="#inicio" class="brand" aria-label="Faldeos La Lajuela - Inicio">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span class="brand-text">
+          <strong>Faldeos La Lajuela</strong>
+          <small>Cabañas · Reserva Directa</small>
+        </span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="menu"
+        aria-label="Abrir menú"
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="menu" class="site-nav" aria-label="Navegación principal">
+        <a href="#cabanas">Cabañas</a>
+        <a href="#ubicacion">Ubicación</a>
+        <a href="#porque">Por qué elegirnos</a>
+        <a href="#galeria">Galería</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#comentarios">Huéspedes</a>
+        <a href="#historia">Historia</a>
+        <a href="#contacto" class="btn btn-lime nav-cta">Reservar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido-principal">
+    <!-- 2. HERO CINEMATOGRÁFICO A PANTALLA COMPLETA CON TIPOGRAFÍA FOTOGRÁFICA INLINE -->
+    <section id="inicio" class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-cinema-stage">
+          <div class="hero-backdrop">
+            <img
+              src="./stock-fotos/hero.jpg"
+              data-parallax
+              alt="Cabañas de madera iluminadas al atardecer en Faldeos La Lajuela"
+              width="1376"
+              height="768"
+              fetchpriority="high"
+            />
+            <div class="hero-scrim"></div>
+          </div>
+
+          <div class="hero-stage-content">
+            <div class="hero-meta-row" data-float>
+              <span class="meta-badge">0% Comisión · Trato Directo</span>
+              <span class="meta-loc">Sector La Lajuela, Chile</span>
+            </div>
+
+            <h1 id="hero-title" class="hero-display">
+              Tu cabaña
+              <span class="inline-photo-pill" aria-hidden="true">
+                <img src="./stock-fotos/interior-1.jpg" alt="" />
+              </span>
+              entre el bosque, tinas calientes
+              <span class="inline-photo-pill" aria-hidden="true">
+                <img src="./stock-fotos/tina-caliente.jpg" alt="" />
+              </span>
+              y <em>vida en libertad</em>
+            </h1>
+
+            <p class="hero-sub">
+              Unidades privadas totalmente equipadas donde despiertas frente a los cerros con ciervos, alpacas, llamas y pavos reales caminando libres alrededor de tu terraza.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#contacto" class="btn btn-lime btn-lg">Reservar directo por WhatsApp</a>
+              <a href="#cabanas" class="btn btn-ghost btn-lg">Explorar las cabañas</a>
+            </div>
+          </div>
+
+          <!-- Barra rápida estilo Booking acoplada al pie del escenario -->
+          <div class="hero-booking-bar">
+            <form id="form-hero" class="cmd-bar" novalidate aria-label="Consulta rápida de disponibilidad">
+              <div class="cmd-field">
+                <label for="hero-llegada">Check-in estimado</label>
+                <input type="date" id="hero-llegada" name="llegada" required />
+              </div>
+
+              <div class="cmd-field">
+                <label for="hero-noches">Noches</label>
+                <select id="hero-noches" name="noches" required>
+                  <option value="1">1 noche</option>
+                  <option value="2" selected>2 noches</option>
+                  <option value="3">3 noches</option>
+                  <option value="4">4 noches</option>
+                  <option value="5">5 noches</option>
+                  <option value="6">6+ noches</option>
+                </select>
+              </div>
+
+              <div class="cmd-field">
+                <label for="hero-personas">Huéspedes</label>
+                <select id="hero-personas" name="personas" required>
+                  <option value="1">1 persona</option>
+                  <option value="2" selected>2 personas</option>
+                  <option value="3">3 personas</option>
+                  <option value="4">4 personas</option>
+                  <option value="5">5 personas</option>
+                  <option value="6">6+ personas</option>
+                </select>
+              </div>
+
+              <div class="cmd-action">
+                <button type="submit" class="btn btn-lime btn-block">Consultar disponibilidad</button>
+              </div>
+
+              <div class="cmd-foot">
+                <p id="hero-bar-status" class="qb-status" role="status" aria-live="polite"></p>
+                <a href="#contacto" class="qb-more">Sumar tinas, desayuno o cuarzo en el formulario completo →</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. CABAÑAS: ZIG-ZAG PANORÁMICO ASIMÉTRICO (SIN TARJETAS IGUALES) -->
+    <section id="cabanas" class="section section-cabanas" aria-labelledby="cabanas-title">
+      <div class="container">
+        <div class="section-split-head" data-reveal>
+          <div>
+            <span class="eyebrow">01 / Arquitectura del Descanso</span>
+            <h2 id="cabanas-title">Cabañas inmersas en el paisaje</h2>
+          </div>
+          <p class="section-lead">
+            Construidas en madera cálida con ventanales de piso a techo y separación real entre unidades para garantizar silencio y privacidad.
+          </p>
+        </div>
+
+        <div class="zigzag-showcase">
+          <article class="zigzag-row" data-reveal>
+            <figure class="zigzag-media">
+              <img src="./stock-fotos/interior-1.jpg" data-parallax alt="Dormitorio principal en madera con vista panorámica al bosque" loading="lazy" width="1376" height="768" />
+            </figure>
+            <div class="zigzag-info">
+              <span class="zigzag-index">ESPACIO 01</span>
+              <h3>Dormitorios con vista a los cerros</h3>
+              <p>Camas amplias vestidas en lino suave, cortinas blackout y despertar directo frente a la naturaleza.</p>
+              <span class="zigzag-spec">[COMPLETAR: distribución de camas por cabaña]</span>
+            </div>
+          </article>
+
+          <article class="zigzag-row zigzag-row--reverse" data-reveal>
+            <figure class="zigzag-media">
+              <img src="./stock-fotos/interior-2.jpg" data-parallax alt="Sala de estar cálida y cocina equipada en madera" loading="lazy" width="1376" height="768" />
+            </figure>
+            <div class="zigzag-info">
+              <span class="zigzag-index">ESPACIO 02</span>
+              <h3>Estar climatizado y cocina completa</h3>
+              <p>Comedor integrado, refrigerador, vajilla completa y calefacción lista para noches de invierno o verano.</p>
+              <span class="zigzag-spec">[COMPLETAR: equipamiento interior y calefacción]</span>
+            </div>
+          </article>
+
+          <article class="zigzag-row" data-reveal>
+            <figure class="zigzag-media">
+              <img src="./stock-fotos/exterior-1.jpg" data-parallax alt="Terraza privada de madera abierta hacia las praderas" loading="lazy" width="1376" height="768" />
+            </figure>
+            <div class="zigzag-info">
+              <span class="zigzag-index">ESPACIO 03</span>
+              <h3>Terraza privada sobre la pradera</h3>
+              <p>Galería exterior techada en cada cabaña para desayunar al aire libre o contemplar la fauna al atardecer.</p>
+              <span class="zigzag-spec">[COMPLETAR: parrilla, terraza y estacionamiento]</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- Barra técnica de especificaciones -->
+        <div class="telemetry-strip" data-reveal>
+          <div class="telemetry-cell">
+            <small>Capacidad</small>
+            <strong>[COMPLETAR: ej. 2 a 6 huéspedes]</strong>
+          </div>
+          <div class="telemetry-cell">
+            <small>Unidades</small>
+            <strong>[COMPLETAR: total de cabañas]</strong>
+          </div>
+          <div class="telemetry-cell">
+            <small>Check-in / Check-out</small>
+            <strong>[COMPLETAR: horarios]</strong>
+          </div>
+          <div class="telemetry-cell">
+            <small>Tarifa Directa</small>
+            <strong>[COMPLETAR: valor por noche]</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. UBICACIÓN: PANEL TOPOGRÁFICO -->
+    <section id="ubicacion" class="section section-ubicacion" aria-labelledby="ubicacion-title">
+      <div class="container radar-layout">
+        <figure class="radar-map" data-reveal>
+          <img src="./assets/mapa.svg" alt="Mapa referencial de Faldeos La Lajuela" loading="lazy" width="800" height="560" />
+          <figcaption>Croquis de acceso · Sector Faldeos La Lajuela</figcaption>
+        </figure>
+
+        <div class="radar-info" data-reveal>
+          <span class="eyebrow">02 / Coordenadas</span>
+          <h2 id="ubicacion-title">Silencio rural de fácil acceso</h2>
+          <p class="section-lead">
+            En los faldeos de La Lajuela: desconexión total rodeada de colinas, con llegada expedita en vehículo.
+          </p>
+
+          <div class="radar-list">
+            <div class="radar-row">
+              <span>01 · Dirección</span>
+              <strong>[COMPLETAR: Camino y kilómetro en La Lajuela]</strong>
+            </div>
+            <div class="radar-row">
+              <span>02 · Comuna / Región</span>
+              <strong>[COMPLETAR: Comuna y Región]</strong>
+            </div>
+            <div class="radar-row">
+              <span>03 · Tiempo de viaje</span>
+              <strong>[COMPLETAR: distancia desde ciudad cercana]</strong>
+            </div>
+            <div class="radar-row">
+              <span>04 · Pin GPS</span>
+              <strong>Enviado por WhatsApp al confirmar · [COMPLETAR]</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. POR QUÉ ELEGIRNOS: LÍNEAS EDITORIALES + ACORDEÓN HORIZONTAL DE FAUNA -->
+    <section id="porque" class="section section-porque" aria-labelledby="porque-title">
+      <div class="container">
+        <div class="section-split-head" data-reveal>
+          <div>
+            <span class="eyebrow">03 / El Sello del Lugar</span>
+            <h2 id="porque-title">Descanso privado adentro, vida libre afuera</h2>
+          </div>
+          <p class="section-lead">
+            Primero aseguras una cabaña cómoda y silenciosa; luego vives el privilegio de compartir el bosque con fauna en libertad.
+          </p>
+        </div>
+
+        <div class="manifesto-lines" data-reveal>
+          <div class="manifesto-item">
+            <span class="m-num">01</span>
+            <h3>Aislamiento acústico y visual</h3>
+            <p>Cabañas distanciadas entre árboles nativos sin ruidos ni aglomeraciones.</p>
+          </div>
+          <div class="manifesto-item">
+            <span class="m-num">02</span>
+            <h3>Trato directo sin recargos</h3>
+            <p>Hablas directo con nosotros por WhatsApp, sin comisiones de portales externos.</p>
+          </div>
+          <div class="manifesto-item">
+            <span class="m-num">03</span>
+            <h3>Bienestar sin salir del recinto</h3>
+            <p>Tinas calientes, cuarzo, desayunos caseros y paseos clásicos en el mismo lugar.</p>
+          </div>
+        </div>
+
+        <!-- Filmstrip interactivo expandible de los 4 animales -->
+        <div class="fauna-filmstrip-wrap" data-reveal>
+          <div class="filmstrip-head">
+            <h3>Habitantes libres del predio</h3>
+            <span>Pasa el cursor o toca cada especie para explorar</span>
+          </div>
+
+          <div class="fauna-accordion">
+            <article class="fauna-slice">
+              <img src="./stock-fotos/pavo.jpg" alt="Pavo real libre en los jardines" loading="lazy" width="1200" height="896" />
+              <div class="slice-overlay">
+                <span class="slice-tag">Fauna Libre 01</span>
+                <h4>Pavos reales</h4>
+                <p>Destellos esmeralda y azul caminando frente a tu terraza cada mañana.</p>
+              </div>
+            </article>
+
+            <article class="fauna-slice">
+              <img src="./stock-fotos/ciervo.jpg" alt="Ciervo en libertad entre los árboles" loading="lazy" width="1264" height="848" />
+              <div class="slice-overlay">
+                <span class="slice-tag">Fauna Libre 02</span>
+                <h4>Ciervos</h4>
+                <p>Silenciosos y serenos al amanecer entre la bruma del bosque.</p>
+              </div>
+            </article>
+
+            <article class="fauna-slice">
+              <img src="./stock-fotos/alpaca.jpg" alt="Alpaca pastando libre en la pradera" loading="lazy" width="1200" height="896" />
+              <div class="slice-overlay">
+                <span class="slice-tag">Fauna Libre 03</span>
+                <h4>Alpacas</h4>
+                <p>Curiosas y pacíficas, acompañan las caminatas por las praderas.</p>
+              </div>
+            </article>
+
+            <article class="fauna-slice">
+              <img src="./stock-fotos/llama.jpg" alt="Llama libre en los senderos del valle" loading="lazy" width="1264" height="848" />
+              <div class="slice-overlay">
+                <span class="slice-tag">Fauna Libre 04</span>
+                <h4>Llamas</h4>
+                <p>Guardianas tranquilas de los senderos y colinas de La Lajuela.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. GALERÍA ASIMÉTRICA (1 HERO + 2 LATERALES POR GRUPO) -->
+    <section id="galeria" class="section section-galeria" aria-labelledby="galeria-title">
+      <div class="container">
+        <div class="galeria-bar" data-reveal>
+          <div>
+            <span class="eyebrow">04 / Galería Visual</span>
+            <h2 id="galeria-title">Interiores &amp; Exteriores</h2>
+          </div>
+
+          <div class="gallery-filters" role="group" aria-label="Filtrar galería">
+            <button type="button" class="filter-btn is-active" data-gallery-filter="all" aria-pressed="true">Todo (6)</button>
+            <button type="button" class="filter-btn" data-gallery-filter="interiores" aria-pressed="false">Interiores (3)</button>
+            <button type="button" class="filter-btn" data-gallery-filter="exteriores" aria-pressed="false">Exteriores (3)</button>
+          </div>
+        </div>
+
+        <!-- Interiores -->
+        <div class="asymmetric-gallery-block" data-gallery-group="interiores" data-reveal>
+          <div class="block-label">
+            <h3>Interiores de las cabañas</h3>
+            <span>Madera nativa y calidez</span>
+          </div>
+          <div class="bento-gallery">
+            <figure class="bento-item bento-item--large" data-lightbox-src="./stock-fotos/interior-1.jpg" tabindex="0" role="button" aria-label="Ampliar dormitorio principal">
+              <img src="./stock-fotos/interior-1.jpg" alt="Dormitorio principal con ventanal al bosque" loading="lazy" width="1376" height="768" />
+              <figcaption>Dormitorio principal con vista al faldeo</figcaption>
+            </figure>
+            <figure class="bento-item" data-lightbox-src="./stock-fotos/interior-2.jpg" tabindex="0" role="button" aria-label="Ampliar sala de estar">
+              <img src="./stock-fotos/interior-2.jpg" alt="Estar comedor integrado con calefacción" loading="lazy" width="1376" height="768" />
+              <figcaption>Estar y comedor en madera</figcaption>
+            </figure>
+            <figure class="bento-item" data-lightbox-src="./stock-fotos/interior-3.jpg" tabindex="0" role="button" aria-label="Ampliar cocina equipada">
+              <img src="./stock-fotos/interior-3.jpg" alt="Cocina equipada con luz natural" loading="lazy" width="1376" height="768" />
+              <figcaption>Cocina completamente equipada</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <!-- Exteriores -->
+        <div class="asymmetric-gallery-block" data-gallery-group="exteriores" data-reveal>
+          <div class="block-label">
+            <h3>Exteriores y entorno libre</h3>
+            <span>Terrazas, senderos y fauna</span>
+          </div>
+          <div class="bento-gallery bento-gallery--reverse">
+            <figure class="bento-item bento-item--large" data-lightbox-src="./stock-fotos/exterior-1.jpg" tabindex="0" role="button" aria-label="Ampliar vista de terraza exterior">
+              <img src="./stock-fotos/exterior-1.jpg" alt="Terraza exterior rodeada de vegetación" loading="lazy" width="1376" height="768" />
+              <figcaption>Terrazas privadas frente al valle</figcaption>
+            </figure>
+            <figure class="bento-item" data-lightbox-src="./stock-fotos/exterior-2.jpg" tabindex="0" role="button" aria-label="Ampliar senderos del predio">
+              <img src="./stock-fotos/exterior-2.jpg" alt="Senderos naturales entre árboles" loading="lazy" width="1376" height="768" />
+              <figcaption>Senderos y jardines del predio</figcaption>
+            </figure>
+            <figure class="bento-item" data-lightbox-src="./stock-fotos/exterior-3.jpg" tabindex="0" role="button" aria-label="Ampliar praderas con animales">
+              <img src="./stock-fotos/exterior-3.jpg" alt="Praderas con animales circulando libres" loading="lazy" width="1376" height="768" />
+              <figcaption>Convivencia diaria con fauna libre</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. SERVICIOS ADICIONALES: BANDAS HORIZONTALES INTERACTIVAS -->
+    <section id="servicios" class="section section-servicios" aria-labelledby="servicios-title">
+      <div class="container">
+        <div class="section-split-head" data-reveal>
+          <div>
+            <span class="eyebrow">05 / Experiencias a Pedido</span>
+            <h2 id="servicios-title">Suma servicios a tu estadía</h2>
+          </div>
+          <p class="section-lead">
+            Selecciona cualquiera de estos cuatro servicios exclusivos para incluirlo automáticamente en tu mensaje de reserva.
+          </p>
+        </div>
+
+        <div class="service-strips-list">
+          <article class="service-strip" data-reveal>
+            <span class="strip-num">01</span>
+            <div class="strip-thumb">
+              <img src="./stock-fotos/autos-antiguos.jpg" alt="Tour en auto antiguo clásico por La Lajuela" loading="lazy" width="1376" height="768" />
+            </div>
+            <div class="strip-copy">
+              <h3>Tours en autos antiguos</h3>
+              <p>Paseos por el valle en vehículos clásicos restaurados. <strong>[COMPLETAR: tarifa y duración]</strong></p>
+            </div>
+            <div class="strip-cta">
+              <button type="button" class="btn-service-toggle" data-add-service="Autos antiguos" aria-pressed="false">
+                + Sumar a mi consulta
+              </button>
+            </div>
+          </article>
+
+          <article class="service-strip" data-reveal>
+            <span class="strip-num">02</span>
+            <div class="strip-thumb">
+              <img src="./stock-fotos/desayuno.jpg" alt="Desayuno campestre servido en la terraza" loading="lazy" width="1376" height="768" />
+            </div>
+            <div class="strip-copy">
+              <h3>Desayunos en tu cabaña</h3>
+              <p>Pan de campo, huevos, fruta y café recién hecho en tu terraza. <strong>[COMPLETAR: opciones]</strong></p>
+            </div>
+            <div class="strip-cta">
+              <button type="button" class="btn-service-toggle" data-add-service="Desayunos" aria-pressed="false">
+                + Sumar a mi consulta
+              </button>
+            </div>
+          </article>
+
+          <article class="service-strip" data-reveal>
+            <span class="strip-num">03</span>
+            <div class="strip-thumb">
+              <img src="./stock-fotos/tina-caliente.jpg" alt="Tina caliente privada al atardecer" loading="lazy" width="1376" height="768" />
+            </div>
+            <div class="strip-copy">
+              <h3>Tinas calientes</h3>
+              <p>Agua temperada al aire libre bajo las estrellas del bosque. <strong>[COMPLETAR: valor]</strong></p>
+            </div>
+            <div class="strip-cta">
+              <button type="button" class="btn-service-toggle" data-add-service="Tinas calientes" aria-pressed="false">
+                + Sumar a mi consulta
+              </button>
+            </div>
+          </article>
+
+          <article class="service-strip" data-reveal>
+            <span class="strip-num">04</span>
+            <div class="strip-thumb">
+              <img src="./stock-fotos/cama-cuarzo.jpg" alt="Cama de cuarzo tibio en sala de bienestar" loading="lazy" width="1376" height="768" />
+            </div>
+            <div class="strip-copy">
+              <h3>Camas de cuarzo</h3>
+              <p>Terapia de calor y descanso profundo sobre cuarzo natural. <strong>[COMPLETAR: sesión]</strong></p>
+            </div>
+            <div class="strip-cta">
+              <button type="button" class="btn-service-toggle" data-add-service="Camas de cuarzo" aria-pressed="false">
+                + Sumar a mi consulta
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. COMENTARIOS: COMPOSICIÓN EDITORIAL ASIMÉTRICA -->
+    <section id="comentarios" class="section section-comentarios" aria-labelledby="comentarios-title">
+      <div class="container">
+        <div class="section-split-head" data-reveal>
+          <div>
+            <span class="eyebrow">06 / Voces de Huéspedes</span>
+            <h2 id="comentarios-title">Estadías que se recuerdan</h2>
+          </div>
+          <p class="section-lead">Testimonios de reservas directas en Faldeos La Lajuela.</p>
+        </div>
+
+        <div class="quotes-mosaic" data-reveal>
+          <article class="quote-featured">
+            <div class="quote-head">
+              <span class="stars" aria-label="5 de 5 estrellas">★★★★★</span>
+              <span class="quote-badge">[TESTIMONIO DE EJEMPLO]</span>
+            </div>
+            <blockquote>
+              “La cabaña impecable y cálida. Abrir la cortina por la mañana y ver ciervos y pavos reales frente a la terraza fue inolvidable. La tina caliente en la noche cerró un fin de semana perfecto.”
+            </blockquote>
+            <footer>
+              <strong>Estadía en pareja</strong> · Cabaña + Tina caliente
+            </footer>
+          </article>
+
+          <div class="quotes-side">
+            <article class="quote-compact">
+              <div class="quote-head">
+                <span class="stars" aria-label="5 de 5 estrellas">★★★★★</span>
+                <span class="quote-badge">[TESTIMONIO DE EJEMPLO]</span>
+              </div>
+              <blockquote>
+                “Fuimos con niños y amaron ver a las alpacas y llamas libres. Todo coordinado rápido por WhatsApp.”
+              </blockquote>
+              <footer>
+                <strong>Familia visitante</strong> · Desayunos + Tour clásico
+              </footer>
+            </article>
+
+            <article class="quote-compact">
+              <div class="quote-head">
+                <span class="stars" aria-label="5 de 5 estrellas">★★★★★</span>
+                <span class="quote-badge">[TESTIMONIO DE EJEMPLO]</span>
+              </div>
+              <blockquote>
+                “Silencio total, camas comodísimas y la sesión en cama de cuarzo nos dejó renovados.”
+              </blockquote>
+              <footer>
+                <strong>Escapada de descanso</strong> · Cabaña + Cama de cuarzo
+              </footer>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. HISTORIA (SECCIÓN OPCIONAL: FÁCIL DE QUITAR) -->
+    <section id="historia" class="section section-historia" aria-labelledby="historia-title" data-optional-section>
+      <div class="container">
+        <div class="historia-banner" data-reveal>
+          <img src="./stock-fotos/historia.jpg" data-parallax alt="Panorámica de Faldeos La Lajuela al atardecer" loading="lazy" width="1376" height="768" />
+          <div class="historia-overlay-card">
+            <span class="eyebrow">07 / Origen (Sección Opcional)</span>
+            <h2 id="historia-title">Nuestra historia en La Lajuela</h2>
+            <p>
+              <strong>[COMPLETAR: Breve relato sobre el origen del proyecto de cabañas de Miguel Cabello y la convivencia armónica con animales en libertad.]</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. FORMULARIO DE CONTACTO PERSONALIZADO -->
+    <section id="contacto" class="section section-contacto" aria-labelledby="contacto-title">
+      <div class="container">
+        <div class="terminal-console" data-reveal>
+          <div class="terminal-left">
+            <span class="eyebrow">08 / Canal Directo</span>
+            <h2 id="contacto-title">Reserva tu cabaña sin intermediarios</h2>
+            <p class="terminal-sub">
+              Completa tus fechas y abre WhatsApp con el resumen listo para recibir disponibilidad y tarifa directa.
+            </p>
+
+            <div class="wa-live-terminal" aria-live="polite">
+              <div class="terminal-bar">
+                <span class="live-dot"></span>
+                <span>Mensaje generado en vivo para WhatsApp</span>
+              </div>
+              <pre id="wa-preview-text" class="wa-preview-code">Hola Faldeos La Lajuela, quisiera consultar disponibilidad...</pre>
+            </div>
+          </div>
+
+          <div class="terminal-right">
+            <form id="form-contacto" class="dark-booking-form" novalidate>
+              <div class="field-wrap">
+                <label for="nombre">Nombre completo *</label>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  placeholder="Tu nombre y apellido"
+                  autocomplete="name"
+                  required
+                  aria-describedby="error-nombre"
+                />
+                <span class="field-err" id="error-nombre" role="alert"></span>
+              </div>
+
+              <div class="field-grid-3">
+                <div class="field-wrap">
+                  <label for="personas">Personas *</label>
+                  <input
+                    type="number"
+                    id="personas"
+                    name="personas"
+                    min="1"
+                    max="20"
+                    placeholder="2"
+                    required
+                    aria-describedby="error-personas"
+                  />
+                  <span class="field-err" id="error-personas" role="alert"></span>
+                </div>
+
+                <div class="field-wrap">
+                  <label for="llegada">Llegada *</label>
+                  <input
+                    type="date"
+                    id="llegada"
+                    name="llegada"
+                    required
+                    aria-describedby="error-llegada"
+                  />
+                  <span class="field-err" id="error-llegada" role="alert"></span>
+                </div>
+
+                <div class="field-wrap">
+                  <label for="salida">Salida *</label>
+                  <input
+                    type="date"
+                    id="salida"
+                    name="salida"
+                    required
+                    aria-describedby="error-salida"
+                  />
+                  <span class="field-err" id="error-salida" role="alert"></span>
+                </div>
+              </div>
+
+              <div id="stay-summary" class="stay-summary" aria-live="polite" hidden></div>
+
+              <div class="field-wrap">
+                <span class="field-label">Sumar experiencias adicionales (opcional)</span>
+                <div class="chips-row" role="group" aria-label="Servicios adicionales">
+                  <button type="button" class="chip-btn" data-service="Autos antiguos" aria-pressed="false">Autos antiguos</button>
+                  <button type="button" class="chip-btn" data-service="Desayunos" aria-pressed="false">Desayunos</button>
+                  <button type="button" class="chip-btn" data-service="Tinas calientes" aria-pressed="false">Tinas calientes</button>
+                  <button type="button" class="chip-btn" data-service="Camas de cuarzo" aria-pressed="false">Camas de cuarzo</button>
+                </div>
+              </div>
+
+              <div class="field-wrap">
+                <label for="mensaje">Consulta adicional (opcional)</label>
+                <textarea
+                  id="mensaje"
+                  name="mensaje"
+                  rows="2"
+                  placeholder="Dudas sobre cabañas, horarios o servicios..."
+                  aria-describedby="error-mensaje"
+                ></textarea>
+                <span class="field-err" id="error-mensaje" role="alert"></span>
+              </div>
+
+              <button type="submit" class="btn btn-lime btn-block btn-lg">
+                Enviar solicitud a WhatsApp
+              </button>
+
+              <p class="form-status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 11. FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-layout">
+      <div class="footer-brand-col">
+        <a href="#inicio" class="brand">
+          <span class="brand-dot" aria-hidden="true"></span>
+          <span class="brand-text">
+            <strong>Faldeos La Lajuela</strong>
+            <small>Cabañas &amp; Fauna en Libertad</small>
+          </span>
+        </a>
+        <p>Refugios equipados en La Lajuela con atención directa de sus dueños.</p>
+      </div>
+
+      <nav class="footer-links" aria-label="Enlaces del pie de página">
+        <a href="#inicio">Inicio</a>
+        <a href="#cabanas">Cabañas</a>
+        <a href="#ubicacion">Ubicación</a>
+        <a href="#porque">Por qué elegirnos</a>
+        <a href="#galeria">Galería</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#comentarios">Comentarios</a>
+        <a href="#historia">Historia</a>
+        <a href="#contacto">Reservar</a>
+      </nav>
+
+      <div class="footer-cta-col">
+        <a href="https://wa.me/56900000000" data-whatsapp target="_blank" rel="noopener noreferrer" class="btn btn-lime">
+          WhatsApp Directo
+        </a>
+        <a
+          href="https://www.instagram.com/faldeos.lalajuela?utm_source=ig_web_button_share_sheet&srtk=ZDNlZDc0MzIxNw=="
+          target="_blank"
+          rel="noopener noreferrer"
+          class="ig-link"
+        >
+          Instagram @faldeos.lalajuela ↗
+        </a>
+      </div>
+    </div>
+
+    <div class="container footer-copy">
+      <span>© <span id="year">2026</span> Faldeos La Lajuela</span>
+      <span>Reservas directas sin intermediarios</span>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada" hidden>
+    <button type="button" id="lightbox-close" class="lightbox-close" aria-label="Cerrar">✕ Cerrar</button>
+    <figure class="lightbox-figure">
+      <img id="lightbox-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Vista ampliada" />
+      <figcaption id="lightbox-caption"></figcaption>
+    </figure>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
